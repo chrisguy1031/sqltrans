@@ -1,0 +1,18 @@
+services:
+  sql-translator:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: sql-translator
+    environment:
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
+    volumes:
+      - ./input:/app/input
+      - ./output:/app/output
+    # 添加网络配置
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge
