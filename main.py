@@ -1,6 +1,6 @@
 import os
 import multiprocessing
-from translate_bak import convert_sql_server_to_oracle
+from translate import convert_sql_server_to_oracle
 import time
 
 def process_sql_file(sql_file):
